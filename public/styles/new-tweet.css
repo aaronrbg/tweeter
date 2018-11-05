@@ -1,0 +1,33 @@
+/* CSS for Compose Tweet form */
+
+.new-tweet {
+    margin-left: 2em;
+    margin-right: 2em;
+    background-color: #eee;
+    padding: 1em;
+    border-radius: .5em;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: thin;
+}
+
+.new-tweet .counter {
+    padding: .5em;
+    text-align: right;
+    float: right;
+    font-style: italic;
+    font-size: 1em;
+}
+
+.new-tweet textarea {
+    margin-top: 10px;
+    padding: .5em;
+    width: 100%;
+}
+
+.new-tweet h2 {
+    margin: 0;
+    border-bottom-style: solid;
+    border-color: black;
+    border-width: thin;
+}

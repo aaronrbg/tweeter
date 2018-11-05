@@ -1,0 +1,23 @@
+/* CSS For Nav Bar */
+
+Nav {
+    position: fixed;
+    height: 80px;
+    width: 100%;
+    background-color: #00a087;
+    color: #e8fdff;
+    padding-left: 2em;
+    padding-right: 2em;
+    float: left;
+}
+#nav-bar .logo {
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+#nav-bar .header {
+    font-size: 2em;
+    line-height: 250%;
+    padding-left: 10px;
+}
+
