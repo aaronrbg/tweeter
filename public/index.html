@@ -41,13 +41,18 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
-        <h2>Compose Tweet</h2>
+        <span><h2>Compose Tweet</h2></span>
         <form method="POST" action="/tweets/">
           <textarea name="text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
       </section>
+      <article class="tweet">
+        <header><span><img src="https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png"><h2>Author</h2><h3>@user</h3></span></header>
+        <p>tweet text</p>
+        <footer>some info</footer>
+      </article>
     </main>
 
   </body>

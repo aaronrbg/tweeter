@@ -25,12 +25,63 @@ body {
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
 
- main {
+main {
   width: 450px;
   margin-left: auto;
   margin-right: auto;
   align-content: center;
   background-color: #ffffff;
-  padding-top: 120px;
+  padding-top: 100px;
   padding-bottom: 20px;
- }
+}
+
+article.tweet {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  background-color: #fff;
+  border-radius: .5em;
+  border-style: solid;
+  border-color: lightgray;
+  border-width: thin;
+}
+
+.tweet h2 {
+  margin: 0;
+  color: lightslategray;
+  vertical-align: top;
+  padding-bottom: 1em;
+  padding-left: .5em;
+  padding-right: 0;
+  display: inline-block;
+}
+
+.tweet h3{
+font-weight: 200;
+color: grey;
+float: right;
+vertical-align: top;
+margin: 0;
+}
+
+.tweet header {
+  background-color: #eee;
+  padding: .5em;
+}
+
+.tweet img {
+  float: left;
+  border-radius: .5em;
+}
+
+.tweet p{
+  padding: 1em;
+}
+
+.tweet footer{
+border-top: solid;
+border-color: #dddddd;
+border-width: thin;
+padding: .5em;
+}
+

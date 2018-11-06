@@ -31,3 +31,7 @@
     border-color: black;
     border-width: thin;
 }
+
+.red {
+    color: #ff0000;
+}
