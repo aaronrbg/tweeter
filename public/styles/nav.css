@@ -1,15 +1,20 @@
 /* CSS For Nav Bar */
 
-Nav {
-    position: fixed;
+nav#nav-bar {
     height: 80px;
-    width: 100%;
+    /* width: 100%; */
+    left: 0;
+    right: 0;
     background-color: #00a087;
     color: #e8fdff;
     padding-left: 2em;
-    padding-right: 2em;
-    float: left;
+    /* padding-right: 2em; */
+    /* float: left; */
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
+
 #nav-bar .logo {
     height: 80px;
     width: 80px;
@@ -20,4 +25,3 @@ Nav {
     line-height: 250%;
     padding-left: 10px;
 }
-

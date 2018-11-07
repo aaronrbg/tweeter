@@ -27,12 +27,14 @@ body {
 
 main {
   width: 450px;
-  margin-left: auto;
-  margin-right: auto;
+  /* height: 100vh; */
+  margin: 0 auto;
   align-content: center;
   background-color: #ffffff;
   padding-top: 100px;
   padding-bottom: 20px;
+  position: relative;
+  z-index: 0;
 }
 
 article.tweet {
@@ -44,6 +46,12 @@ article.tweet {
   border-style: solid;
   border-color: lightgray;
   border-width: thin;
+  opacity: .7;
+}
+
+article.tweet:hover {
+  border-color: black;
+  opacity: 1;
 }
 
 .tweet h2 {
@@ -56,32 +64,45 @@ article.tweet {
   display: inline-block;
 }
 
-.tweet h3{
-font-weight: 200;
-color: grey;
-float: right;
-vertical-align: top;
-margin: 0;
+.tweet h3 {
+  font-weight: 200;
+  color: grey;
+  float: right;
+  vertical-align: top;
+  margin: .25em 0 0 0;
+  opacity: 0.8;
 }
 
 .tweet header {
   background-color: #eee;
+  border-top-right-radius: .5em;
+  border-top-left-radius: .5em;
   padding: .5em;
 }
 
 .tweet img {
   float: left;
   border-radius: .5em;
+  opacity: 0.8;
 }
 
-.tweet p{
-  padding: 1em;
+.tweet p {
+  padding-left: 1em;
+  font-size: 1.25em;
 }
 
-.tweet footer{
-border-top: solid;
-border-color: #dddddd;
-border-width: thin;
-padding: .5em;
+.tweet footer {
+  border-top: solid;
+  border-color: #dddddd;
+  border-width: thin;
+  padding: .5em;
 }
 
+.tweet i {
+  float: right;
+  visibility: hidden;
+}
+
+.tweet:hover i {
+  visibility: visible;
+}

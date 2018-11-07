@@ -1,6 +1,6 @@
 /* character counter for tweets */
 
-$(document).ready(function() {
+$(function() {
     $('.new-tweet textarea').on('keyup', function() {
         const characterCount = $(this).val().length;
         const charactersRemaining = (140 - characterCount);

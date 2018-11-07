@@ -1,5 +1,9 @@
 /* CSS for Compose Tweet form */
 
+form {
+    z-index: 0;
+}
+
 .new-tweet {
     margin-left: 2em;
     margin-right: 2em;
