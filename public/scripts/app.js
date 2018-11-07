@@ -37,16 +37,23 @@ $(document).ready(function() {
         });
     }
 
-    $('form').on('submit', function(event) {
-      event.preventDefault();
-
-      $.post('/', $('form').serialize());
-
+    function loadTweets(){
+      console.log('load the tweets')
       $.get('/tweets', (data) => {
         renderTweets(data);
       });
+    }
 
+    function clearTweets(){
+      console.log('clear the tweets')
+    }
+
+    $('form').on('submit', function(event) {
+      event.preventDefault();
+      $.post('/tweets/', $('form').serialize());
+      clearTweets();
+      loadTweets();
     });
 
-    renderTweets(data);
+    loadTweets()
 });
