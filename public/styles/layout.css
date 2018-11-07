@@ -27,7 +27,7 @@ body {
 
 main {
   width: 450px;
-  /* height: 100vh; */
+  height: 100vh;
   margin: 0 auto;
   align-content: center;
   background-color: #ffffff;
@@ -47,6 +47,7 @@ article.tweet {
   border-color: lightgray;
   border-width: thin;
   opacity: .7;
+  overflow: hidden;
 }
 
 article.tweet:hover {
@@ -64,7 +65,7 @@ article.tweet:hover {
   display: inline-block;
 }
 
-.tweet h3 {
+.tweet .userID {
   font-weight: 200;
   color: grey;
   float: right;
@@ -75,8 +76,6 @@ article.tweet:hover {
 
 .tweet header {
   background-color: #eee;
-  border-top-right-radius: .5em;
-  border-top-left-radius: .5em;
   padding: .5em;
 }
 
