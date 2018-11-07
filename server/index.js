@@ -26,9 +26,6 @@ const DataHelpers = require("./lib/data-helpers.js")(db);
 // so it can define routes that use it to interact with the data layer.
 const tweetsRoutes = require("./routes/tweets")(DataHelpers);
 
-//This jquery function counts down from 140 characters in the new-tweet text area
-const composerCharCounter = require('../public/scripts/composer-char-counter.js');
-
 // Mount the tweets routes at the "/tweets" path prefix:
 app.use("/tweets", tweetsRoutes);
 
