@@ -7,6 +7,7 @@ form {
 .new-tweet {
     margin-left: 2em;
     margin-right: 2em;
+    height: 10em;
     background-color: #eee;
     padding: 1em;
     border-radius: .5em;
