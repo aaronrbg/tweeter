@@ -36,7 +36,7 @@ $(document).ready(function() {
         let $tweet = $('<article>').addClass('tweet');
         $tweet.append(`<header><img src="${img}"><h2>${name}</h2><span class='userID'>${handle}</span></header>`);
         $tweet.append(`<p>${text}</p>`);
-        $tweet.append(`<footer>${daysAgo}<i class="fas fa-flag"></i></footer></article>`);
+        $tweet.append(`<footer>${daysAgo}<i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-thumbs-up"></i></footer></article>`);
         return $tweet;
     }
 
@@ -82,6 +82,7 @@ $(document).ready(function() {
         } else {
             $.post('/tweets/', $tweet, function(){
                 $('form textarea').val('');
+                $('.new-tweet .counter').text('140');
                 clearTweets();
                 loadTweets();
                 });

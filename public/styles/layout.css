@@ -102,10 +102,16 @@ article.tweet:hover {
 .tweet i {
   float: right;
   visibility: hidden;
+  padding: 0 .25em;
 }
 
 .tweet:hover i {
   visibility: visible;
+  opacity: .7;
+}
+
+.tweet i:hover {
+  opacity: 1;
 }
 
 div.error {
