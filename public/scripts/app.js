@@ -98,7 +98,3 @@ $(document).ready(function() {
 
     loadTweets()
 });
-
-//TODO: 
-//compose button moves off the header on resize
-//sliding compose jumps (wtf?)
