@@ -1,6 +1,7 @@
 /* CSS For Nav Bar */
 
 nav#nav-bar {
+    min-width: 550px;
     height: 80px;
     left: 0;
     right: 0;
@@ -9,31 +10,31 @@ nav#nav-bar {
     position: fixed;
     z-index: 1;
     display: inline-flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+#nav-bar .nav-content {
+    align-content: center;
 }
 
 #nav-bar .brand {
-    justify-content: flex-start;
-    margin-left: 7em;
+    /* justify-content: flex-start;
+    margin-left: 7em; */
 }
 
 #nav-bar .logo {
     height: 80px;
     width: 80px;
-
 }
 #nav-bar .header {
-    margin-top: 1em;
     font-size: 2em;
-    padding-left: 10px;
-    vertical-align: 80%; 
-    white-space: nowrap;
-
+    vertical-align: 80%;
 }
 #nav-bar .button {
-    margin-right: 7em;
-    margin-top: .5em;
-    margin-bottom: .5em;
+    vertical-align: 140%;
+    padding: .5em;
+    margin-left: 7em;
+    margin-right: auto;
     border-style: solid;
     border-color: black;
     border-width: .075em;
@@ -41,19 +42,15 @@ nav#nav-bar {
     background-color: #e8fdff; 
     font-size: 1.3em;
     font-weight: 300;
-    line-height: 180%;
-    padding: .5em;
     color: #00a087;
-    display: inline-flex;
     cursor: pointer;
 }
 
 #nav-bar .button i{
-    line-height: 1.7;
+    /* line-height: 1.7; */
 }
 
 #nav-bar .button:hover {
     color: black;
     background-color: white;
-    justify-content: flex-end;
 }
