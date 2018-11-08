@@ -6,7 +6,17 @@
 
 
 $(document).ready(function() {
-        
+    
+    function toDaysAgo(time){
+        const timeAgo = Date.now() - parseInt(time, 10);
+        let daysAgo = Math.floor(timeAgo/(1000*60*60*24));
+        if (daysAgo === 1) {
+            daysAgo += ' day ago'
+        } else {
+            daysAgo += ' days ago'
+        }
+        return daysAgo
+    }
 
     //this function escapes any possible html or script which could end up in the DOM
     function escape(text){
@@ -20,18 +30,18 @@ $(document).ready(function() {
         const handle = escape(tweetDataObject.user.handle);
         const text = escape(tweetDataObject.content.text);
         const timestamp = escape(tweetDataObject.created_at);
-        const daysAgo = 0
+        const daysAgo = toDaysAgo(timestamp);
 
 
         let $tweet = $('<article>').addClass('tweet');
         $tweet.append(`<header><img src="${img}"><h2>${name}</h2><span class='userID'>${handle}</span></header>`);
         $tweet.append(`<p>${text}</p>`);
-        $tweet.append(`<footer>${timestamp}<i class="fas fa-flag"></i></footer></article>`);
+        $tweet.append(`<footer>${daysAgo}<i class="fas fa-flag"></i></footer></article>`);
         return $tweet;
     }
 
     function renderTweets(tweets) {
-        tweets.forEach(function(x, i){
+        tweets.reverse().forEach(function(x, i){
             const $tweet = createTweetElement(tweets[i]);
             $('section.tweets-container').append($tweet);
         });
@@ -45,15 +55,50 @@ $(document).ready(function() {
     }
 
     function clearTweets(){
-      console.log('clear the tweets')
+        $('section.tweets-container').empty();
+    }
+
+    function errorUser(message) {
+        if ($('div.error').is(":visible")) {
+            $('div.error').hide();
+        }
+
+        if (!message) {
+            $('div.error').text("your squeek aint got nuttin' in der").slideDown('fast');
+            return true;
+        } else if (message.length > 140) {
+            $('div.error').text("too much squeek!").slideDown('fast');
+            return true;
+        } else { 
+            return false;
+        }
     }
 
     $('form').on('submit', function(event) {
       event.preventDefault();
-      $.post('/tweets/', $('form').serialize());
-      clearTweets();
-      loadTweets();
+      const tweet = $('form textarea').val()
+      const $tweet = $('form').serialize();
+        if (errorUser(tweet)) {
+        } else {
+            $.post('/tweets/', $tweet, function(){
+                $('form textarea').val('');
+                clearTweets();
+                loadTweets();
+                });
+        }
     });
+
+    $('#nav-bar .button').on('click', function(event){
+        if ($('div.error').is(":visible")) {
+            $('div.error').hide();
+        }
+        $('.new-tweet').slideToggle('slow');
+        $('textarea').select();
+    })
 
     loadTweets()
 });
+
+//TODO: 
+//compose button moves off the header on resize
+//sliding compose jumps (wtf?)

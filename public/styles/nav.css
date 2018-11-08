@@ -2,26 +2,58 @@
 
 nav#nav-bar {
     height: 80px;
-    /* width: 100%; */
     left: 0;
     right: 0;
     background-color: #00a087;
     color: #e8fdff;
-    padding-left: 2em;
-    /* padding-right: 2em; */
-    /* float: left; */
     position: fixed;
-    top: 0;
     z-index: 1;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+#nav-bar .brand {
+    justify-content: flex-start;
+    margin-left: 7em;
 }
 
 #nav-bar .logo {
     height: 80px;
     width: 80px;
-    float: left;
+
 }
 #nav-bar .header {
+    margin-top: 1em;
     font-size: 2em;
-    line-height: 250%;
     padding-left: 10px;
+    vertical-align: 80%; 
+    white-space: nowrap;
+
+}
+#nav-bar .button {
+    margin-right: 7em;
+    margin-top: .5em;
+    margin-bottom: .5em;
+    border-style: solid;
+    border-color: black;
+    border-width: .075em;
+    border-radius: .25em;
+    background-color: #e8fdff; 
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 180%;
+    padding: .5em;
+    color: #00a087;
+    display: inline-flex;
+    cursor: pointer;
+}
+
+#nav-bar .button i{
+    line-height: 1.7;
+}
+
+#nav-bar .button:hover {
+    color: black;
+    background-color: white;
+    justify-content: flex-end;
 }

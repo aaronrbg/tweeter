@@ -86,8 +86,9 @@ article.tweet:hover {
 }
 
 .tweet p {
-  padding-left: 1em;
+  padding: 0 1em;
   font-size: 1.25em;
+  word-break: break-all;
 }
 
 .tweet footer {
@@ -104,4 +105,18 @@ article.tweet:hover {
 
 .tweet:hover i {
   visibility: visible;
+}
+
+div.error {
+  margin-top: 1em;
+  margin-left: 2em;
+  margin-right: 2em;
+  background-color: #ffDDDD;
+  color: red;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ff9999;
+  border-radius: .25em;
+  padding: .5em;
+  display: none;
 }
