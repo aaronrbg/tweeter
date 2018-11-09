@@ -1,0 +1,66 @@
+article.tweet {
+    background-color: $bg-light;
+    margin-top: 1em;
+    margin-left: 2em;
+    margin-right: 2em;
+    border-radius: .5em;
+    border-style: solid;
+    border-color: lightgray;
+    border-width: thin;
+    opacity: .7;
+    overflow: hidden;
+        
+    h2 {
+        color: $text-dark;
+        margin: 0;
+        vertical-align: top;
+        padding: 0 0 1em .5em;
+        display: inline-block;
+        }
+
+    .userID {
+        font-weight: 200;
+        color: grey;
+        float: right;
+        vertical-align: top;
+        margin: .25em 0 0 0;
+        opacity: 0.8;
+        }
+
+    header {
+        background-color: #eee;
+        padding: .5em;
+        }
+
+    img {
+        float: left;
+        border-radius: .5em;
+        opacity: 0.8;
+        }
+
+    p {
+        padding: 0 1em;
+        font-size: 1.25em;
+        word-break: break-all;
+        }
+
+    footer {
+        border: thin solid #ddd;
+        padding: .5em;
+        }
+
+    i {
+        float: right;
+        visibility: hidden;
+        padding: 0 .25em;
+    }
+
+    :hover i {
+        visibility: visible;
+        opacity: .7;
+        }
+
+    i:hover {
+        opacity: 1;
+    }
+}

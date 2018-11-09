@@ -1,0 +1,57 @@
+$font:          'Roboto Condensed', sans-serif; 
+$prime-color:   #00a087;
+$second-color:  #e8fdff;
+$text-light:    #fff;
+$text-dark:     #244751;
+$bg-light:      #fff;
+$bg-dark:       #eee;
+
+@import '_nav';
+@import '_new-tweet';
+@import '_tweets';
+
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+
+html {
+    box-sizing: border-box;
+    }
+    *, *:before, *:after {
+    box-sizing: inherit;
+    }
+
+body {
+    font-family: $font;
+    color: $text-dark;
+    background-color: $bg-dark;
+    margin: 0 auto;
+    width: 450px;
+    }
+  
+main {
+    background-color: $bg-light;
+    height: 100%;
+    margin: 0, auto;
+    align-content: center;
+    padding-top: 100px;
+    padding-bottom: 20px;
+    z-index: 0;
+    }
+
+Article:hover {
+    border-color: black;
+    opacity: 1;
+    }
+    
+div.error {
+    margin: 1em 2em 0 2em;
+    background-color: #ffDDDD;
+    color: red;
+    border: 1px solid #f99;
+    border-radius: .25em;
+    padding: .5em;
+    display: none;
+}
