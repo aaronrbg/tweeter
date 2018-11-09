@@ -1,6 +1,6 @@
 /* CSS For Nav Bar */
 nav#nav-bar {
-  min-width: 550px;
+  min-width: 450px;
   height: 80px;
   left: 0;
   right: 0;
@@ -14,6 +14,7 @@ nav#nav-bar {
 
 #nav-bar .nav-content {
   align-content: center;
+  min-width: 450px;
 }
 
 #nav-bar .brand {
@@ -47,6 +48,11 @@ nav#nav-bar {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 600px) {
+  #nav-bar .button {
+    margin-left: 1em;
+  }
+}
 #nav-bar .button i {
   /* line-height: 1.7; */
 }

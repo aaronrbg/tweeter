@@ -1,7 +1,7 @@
 /* CSS For Nav Bar */
 
 nav#nav-bar {
-    min-width: 550px;
+    min-width: 450px;
     height: 80px;
     left: 0;
     right: 0;
@@ -15,6 +15,7 @@ nav#nav-bar {
 
 #nav-bar .nav-content {
     align-content: center;
+    min-width: 450px;
 }
 
 #nav-bar .brand {
@@ -30,20 +31,27 @@ nav#nav-bar {
     font-size: 2em;
     vertical-align: 80%;
 }
+
 #nav-bar .button {
-    vertical-align: 140%;
-    padding: .5em;
-    margin-left: 7em;
-    margin-right: auto;
-    border-style: solid;
-    border-color: black;
-    border-width: .075em;
-    border-radius: .25em;
-    background-color: #e8fdff; 
-    font-size: 1.3em;
-    font-weight: 300;
-    color: #00a087;
-    cursor: pointer;
+vertical-align: 140%;
+padding: .5em;
+margin-left: 7em;
+margin-right: auto;
+border-style: solid;
+border-color: black;
+border-width: .075em;
+border-radius: .25em;
+background-color: #e8fdff; 
+font-size: 1.3em;
+font-weight: 300;
+color: #00a087;
+cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    #nav-bar .button{
+        margin-left: 1em;
+    }
 }
 
 #nav-bar .button i{

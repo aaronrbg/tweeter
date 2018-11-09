@@ -7,16 +7,16 @@
 
 $(document).ready(function() {
     
-    function toDaysAgo(time){
-        const timeAgo = Date.now() - parseInt(time, 10);
-        let daysAgo = Math.floor(timeAgo/(1000*60*60*24));
-        if (daysAgo === 1) {
-            daysAgo += ' day ago'
-        } else {
-            daysAgo += ' days ago'
-        }
-        return daysAgo
-    }
+    // function toDaysAgo(time){
+    //     const timeAgo = Date.now() - parseInt(time, 10);
+    //     let daysAgo = Math.floor(timeAgo/(1000*60*60*24));
+    //     if (daysAgo === 1) {
+    //         daysAgo += ' day ago'
+    //     } else {
+    //         daysAgo += ' days ago'
+    //     }
+    //     return daysAgo
+    // }
 
     //this function escapes any possible html or script which could end up in the DOM
     function escape(text){
@@ -25,18 +25,16 @@ $(document).ready(function() {
     }
 
     function createTweetElement(tweetDataObject){
-        const img = escape(tweetDataObject.user.avatars.small);
-        const name = escape(tweetDataObject.user.name);
-        const handle = escape(tweetDataObject.user.handle);
+        const img = tweetDataObject.user.avatars.small;
+        const name = tweetDataObject.user.name;
+        const handle = tweetDataObject.user.handle;
         const text = escape(tweetDataObject.content.text);
-        const timestamp = escape(tweetDataObject.created_at);
-        const daysAgo = toDaysAgo(timestamp);
-
+        const timestamp = $.timeago(tweetDataObject.created_at);
 
         let $tweet = $('<article>').addClass('tweet');
         $tweet.append(`<header><img src="${img}"><h2>${name}</h2><span class='userID'>${handle}</span></header>`);
         $tweet.append(`<p>${text}</p>`);
-        $tweet.append(`<footer>${daysAgo}<i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-thumbs-up"></i></footer></article>`);
+        $tweet.append(`<footer>${timestamp}<i class="fas fa-flag"></i><i class="fas fa-retweet"></i><i class="fas fa-thumbs-up"></i></footer></article>`);
         return $tweet;
     }
 
