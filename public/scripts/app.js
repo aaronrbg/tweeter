@@ -7,16 +7,9 @@
 
 $(document).ready(function() {
     
-    // function toDaysAgo(time){
-    //     const timeAgo = Date.now() - parseInt(time, 10);
-    //     let daysAgo = Math.floor(timeAgo/(1000*60*60*24));
-    //     if (daysAgo === 1) {
-    //         daysAgo += ' day ago'
-    //     } else {
-    //         daysAgo += ' days ago'
-    //     }
-    //     return daysAgo
-    // }
+    const $error = $('div.error')
+    const $textArea = $('form textarea')
+
 
     //this function escapes any possible html or script which could end up in the DOM
     function escape(text){
@@ -46,7 +39,6 @@ $(document).ready(function() {
     }
 
     function loadTweets(){
-      console.log('load the tweets')
       $.get('/tweets', (data) => {
         renderTweets(data);
       });
@@ -57,15 +49,15 @@ $(document).ready(function() {
     }
 
     function errorUser(message) {
-        if ($('div.error').is(":visible")) {
-            $('div.error').hide();
+        if ($error.is(":visible")) {
+            $error.hide();
         }
 
         if (!message) {
-            $('div.error').text("your squeek aint got nuttin' in der").slideDown('fast');
+            $error.text("your squeek aint got nuttin' in der").slideDown('fast');
             return true;
         } else if (message.length > 140) {
-            $('div.error').text("too much squeek!").slideDown('fast');
+            $error.text("too much squeek!").slideDown('fast');
             return true;
         } else { 
             return false;
@@ -74,12 +66,12 @@ $(document).ready(function() {
 
     $('form').on('submit', function(event) {
       event.preventDefault();
-      const tweet = $('form textarea').val()
+      const tweet = $textArea.val()
       const $tweet = $('form').serialize();
         if (errorUser(tweet)) {
         } else {
             $.post('/tweets/', $tweet, function(){
-                $('form textarea').val('');
+                $textArea.val('');
                 $('.new-tweet .counter').text('140');
                 clearTweets();
                 loadTweets();
@@ -88,11 +80,14 @@ $(document).ready(function() {
     });
 
     $('#nav-bar .button').on('click', function(event){
-        if ($('div.error').is(":visible")) {
-            $('div.error').hide();
+        if ($error.is(":visible")) {
+            $error.hide();
+        }
+        if ($('.new-tweet').is(":hidden")) {
+            window.scrollTo(0, 0);
         }
         $('.new-tweet').slideToggle('slow');
-        $('textarea').select();
+        $textArea.select();
     })
 
     loadTweets()

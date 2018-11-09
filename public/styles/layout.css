@@ -1,5 +1,5 @@
 /* CSS For Nav Bar */
-nav#nav-bar {
+#nav-bar {
   min-width: 450px;
   height: 80px;
   left: 0;
@@ -15,11 +15,6 @@ nav#nav-bar {
 #nav-bar .nav-content {
   align-content: center;
   min-width: 450px;
-}
-
-#nav-bar .brand {
-  /* justify-content: flex-start;
-  margin-left: 7em; */
 }
 
 #nav-bar .logo {
@@ -48,20 +43,16 @@ nav#nav-bar {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 600px) {
-  #nav-bar .button {
-    margin-left: 1em;
-  }
-}
-#nav-bar .button i {
-  /* line-height: 1.7; */
-}
-
 #nav-bar .button:hover {
   color: black;
   background-color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  #nav-bar .button {
+    margin-left: 1em;
+  }
+}
 /* CSS for Compose Tweet form */
 form {
   z-index: 0;
@@ -196,8 +187,8 @@ Article:hover {
   opacity: 1;
 }
 
-div.error {
-  margin: 1em 2em 0 2em;
+.error {
+  margin: 0 2em;
   background-color: #ffDDDD;
   color: red;
   border: 1px solid #f99;
