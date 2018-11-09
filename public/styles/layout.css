@@ -30,7 +30,7 @@
 #nav-bar .button {
   vertical-align: 140%;
   padding: 0.5em;
-  margin-left: 7em;
+  margin-left: 11em;
   margin-right: auto;
   border-style: solid;
   border-color: black;
@@ -50,7 +50,7 @@
 
 @media only screen and (max-width: 600px) {
   #nav-bar .button {
-    margin-left: 1em;
+    margin-left: 6em;
   }
 }
 /* CSS for Compose Tweet form */

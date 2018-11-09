@@ -54,10 +54,10 @@ $(document).ready(function() {
         }
 
         if (!message) {
-            $error.text("your squeek aint got nuttin' in der").slideDown('fast');
+            $error.text("Nothing to tweet!").slideDown('fast');
             return true;
         } else if (message.length > 140) {
-            $error.text("too much squeek!").slideDown('fast');
+            $error.text("Too much to tweet!").slideDown('fast');
             return true;
         } else { 
             return false;
