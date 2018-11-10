@@ -20,5 +20,8 @@ Tweeter is a simple, single-page Twitter clone. Compose tweets and view a persit
 
 ## Screenshots
 
-!["Screenshot of tweet compose box"]()
-!["Screenshot of tweets"]()
+!["Screenshot of tweet compose box"](https://raw.githubusercontent.com/aaronrbg/tweeter/master/docs/screenshots/compose-tweet.png)
+!["Screenshot of tweets"](https://raw.githubusercontent.com/aaronrbg/tweeter/master/docs/screenshots/tweets.png)
+
+##Extra Features
+A few extra features I have added (stretch) are styles written with sass and a responsive header for adjusting bage width.
