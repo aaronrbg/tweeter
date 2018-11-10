@@ -6,7 +6,7 @@ Tweeter is a simple, single-page Twitter clone. Compose tweets and view a persit
 
 1. Clone this repository.
 2. Install dependencies using the `npm install` command.
-3. Start the web server using the `npm run local` command.
+3. Start the web server using the `npm start` command.
 4. Go to http://localhost:8080/ in your browser to use the app.
 
 ## Dependencies
@@ -24,4 +24,4 @@ Tweeter is a simple, single-page Twitter clone. Compose tweets and view a persit
 !["Screenshot of tweets"](https://raw.githubusercontent.com/aaronrbg/tweeter/master/docs/screenshots/tweets.png)
 
 ## Extra Features
-A few extra features I have added (stretch) are styles written with sass and a responsive header for adjusting bage width.
+A few extra features I have added (stretch) are styles written with sass and a responsive header for adjusting page width.
